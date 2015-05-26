@@ -1,0 +1,31 @@
+{
+  "name": "md5-cli",
+  "version": "1.0.0",
+  "description": "md5 client tool. md5-cli \"string\" returns the hash of that string.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jesusdario/md5-cli.git"
+  },
+  "keywords": [
+    "md5",
+    "cli",
+    "javascript",
+    "node",
+    "terminal",
+    "security",
+    "hash"
+  ],
+    "bin": {
+    "md5-cli": "index.js"
+  },
+  "author": "jesusdario",
+  "license": "GPL2",
+  "bugs": {
+    "url": "https://github.com/jesusdario/md5-cli/issues"
+  },
+  "homepage": "https://github.com/jesusdario/md5-cli"
+}
