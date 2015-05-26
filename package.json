@@ -19,7 +19,7 @@
     "security",
     "hash"
   ],
-    "bin": {
+  "bin": {
     "md5-cli": "index.js"
   },
   "author": "jesusdario",
@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/jesusdario/md5-cli/issues"
   },
-  "homepage": "https://github.com/jesusdario/md5-cli"
+  "homepage": "https://github.com/jesusdario/md5-cli",
+  "dependencies": {
+    "MD5": "^1.2.2"
+  }
 }
