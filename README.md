@@ -28,3 +28,5 @@ Make a pull request or write an issue, I will be pleased to answer.
 
 <hr/>
 <a href="http://xway.io/os">Know how to build IoT apps in node.js</a>
+
+Forked to use dependency on md5 instead of MD5

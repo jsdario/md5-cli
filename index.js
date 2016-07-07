@@ -2,17 +2,28 @@
 ':' //; exec "$(command -v nodejs || command -v node)" "$0" "$@"
 
 var fs = require('fs');
-var md5 = require('MD5');
+var md5 = require('md5');
 var path = require('path');
 
-var target = process.argv[2];
-var pathToTarget = path.resolve(__dirname, target);
+// Example: md5-cli 'foo'
+if (process.stdin.isTTY) {
+  var target = process.argv[2];
+  console.log(md5(target));
 
-if (fs.existsSync(pathToTarget)) {
-	fs.readFile(pathToTarget, function(err, buf) {
-		if(err) throw err;
-		console.log(md5(buf));
-	});
+// Example: echo 'foo' | md5-cli
 } else {
-	console.log(md5(target));
+  var data = '';
+   process.stdin.on('readable', function() {
+    var chunk;
+    while (chunk = process.stdin.read()) {
+      data += chunk;
+    }
+  });
+
+  process.stdin.on('end', function () {
+    // There will be a trailing \n from the user hitting enter. Get rid of it.
+    data = data.replace(/\n$/, '');
+    console.log(md5(data));
+  });
 }
+
