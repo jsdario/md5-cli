@@ -2,7 +2,7 @@
 ':' //; exec "$(command -v nodejs || command -v node)" "$0" "$@"
 
 var fs = require('fs');
-var md5 = require('MD5');
+var md5 = require('md5');
 var path = require('path');
 
 var target = process.argv[2];
